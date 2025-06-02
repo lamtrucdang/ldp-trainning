@@ -1,0 +1,87 @@
+.section-homepage-8
+	.container
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		gap: 32px
+	.homepage-8-title
+		padding-top: 80px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		h2 
+			@apply text-Neutral-900 font-medium text-5xl
+
+	.homepage-8-btn
+		display: flex
+		flex-direction: row
+		justify-content: center
+		gap: 16px
+		span
+			@apply text-Neutral-500-main font-normal text-lg
+			display: inline-flex
+			align-items: center
+			gap: 8px
+			padding: 10px 28px
+			border: 1.5px solid #818181
+			border-radius: 999px
+			font-weight: 500
+			transition: all 0.2s
+			cursor: pointer
+
+			&:hover
+				@apply bg-Primary-2 text-white
+				border-color: #ed9a22
+
+			&[class*='current-menu-item']
+				&>span
+					background-size: 100% 100%
+					@apply text-Primary-2
+					&::before
+						@apply text-Primary-2
+				&>span
+					+hover-underline(93%, #ed9a22)
+					&:hover
+						&::before
+							@apply text-Primary-2
+					@apply pb-[3px] block hover:text-Primary-2 transition-all
+	.homepage-8-content
+		display: flex
+		flex-direction: row
+		justify-content: center
+
+	.homepage-8-news
+		display: flex
+		flex-direction: row
+		gap: 24px
+		width: 100%
+		max-width: 400px
+
+	.homepage-8-news-sub
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+		.category
+			@apply text-Neutral-500-main font-normal text-lg
+			display: inline-flex
+			align-items: center
+			gap: 8px
+			padding: 10px 28px
+			border: 1.5px solid #818181
+			border-radius: 5px
+			font-weight: 500
+			transition: all 0.2s
+			cursor: pointer
+
+			&:hover
+				@apply bg-Primary-2 text-white
+				border-color: #ed9a22
+		.date
+			@apply text-Neutral-500-main font-normal text-sm
+			display: inline-flex
+		h3.homepage-8-news-title
+			@apply text-Neutral-900 font-bold text-xl
+			text-overflow: ellipsis

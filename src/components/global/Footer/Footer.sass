@@ -1,0 +1,214 @@
+footer
+	@media (max-width: 575.98px)
+	background-color: #FFF4E5
+	@apply text-Primary-1
+	position: relative
+	.container
+		max-width: 100% !important
+		padding-left: 4rem
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		padding-right: 0 !important
+	.footer-main
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		gap: 24px
+		@media (max-width: 575.98px)
+			@apply text-[16px]
+	.footer-above
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+		.footer-content
+			margin-bottom: 1rem
+			p
+				@apply font-bold text-2xl
+				gap: 16px
+		.footer-form
+			flex-direction: row
+			align-items: center
+			justify-content: space-between
+			position: relative
+			display: flex
+			input
+				@apply flex-1 px-7 py-4 rounded-full bg-white text-base outline-none border-none
+				position: relative
+				padding-right: 3.5rem
+			.email-btn
+				@apply text-lg font-medium
+				@apply inline-flex items-center justify-center px-8 py-2 rounded-full bg-Primary-1 text-white font-medium transition-all
+				position: absolute
+				right: 0.25rem
+				justify-items: end
+				@apply hover:bg-Primary-2
+				i
+					@apply ml-3 text-lg
+	.footer-logo
+		@apply flex gap-6 mt-6 mb-2
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 8px
+		@media (max-width: 575.98px)
+			@apply mb-2
+		.footer-cert-title
+			@apply font-semibold text-lg mb-2 block
+		.footer-cert-imgs
+			display: flex
+			gap: 16px
+	.footer-list
+		@apply flex flex-col gap-3
+		li
+			&[class*='current-menu-item']
+				a
+					background-size: 100% 100%
+					@apply text-Primary-2
+			a
+				+hover-underline(93%, #ed9a22)
+				@apply hover:text-Primary-2 pb-2
+
+	.footer-link-title
+		@apply text-base lg:text-base font-bold mb-4
+	.footer-link
+		@apply flex-1 flex flex-col justify-between
+		@apply text-Neutral-400 font-medium
+	.footer-bottom
+		@apply text-base font-medium
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+		.footer-designed-by
+			display: block
+			margin-top: 2px
+		ul
+			display: flex
+			flex-direction: row
+			gap: 16px
+			@apply text-Neutral-500-main font-medium 
+			justify-content: flex-end
+			li
+				&[class*='current-menu-item']
+					a
+						background-size: 100% 100%
+						@apply text-Primary-2
+				a
+					+hover-underline(93%, #ed9a22)
+					@apply hover:text-Primary-2 pb-2
+	.footer-contact-box	
+		@apply bg-Primary-1
+		@apply text-white
+		border-radius: 24px 0 0 24px
+		display: flex
+		position: absolute
+		gap: 2rem
+		right: 0
+		flex-direction: column
+		justify-content: space-between
+		padding: 4rem
+		position: relative
+		z-index: 1
+		.box-logo
+			display: flex
+			align-items: center
+			gap: 16px
+			@media (max-width: 575.98px)
+				@apply mb-4
+			margin-bottom: 1.5rem
+			img
+				height: auto
+				width: 124px
+		.box-logo-title
+			@apply text-base font-bold mb-2
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			flex: 1
+			@apply max-w-full
+			white-space: normal
+		.footer-contact-info
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			margin-right: 2rem
+		.footer-logo-overlay
+			position: absolute
+			opacity: 50%
+			right: 0
+			bottom: 0
+			width: auto
+			height: auto
+			z-index: -1
+	.footer-phone
+		@apply mb-6
+		span 
+			@apply mb-2
+	.footer-address
+		@apply mb-6
+		span 
+			@apply mb-2
+	.footer-social
+		@apply mb-6
+		span 
+			@apply mb-2
+	.footer-social-list
+		.social-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 56px
+			height: 56px
+			background: #fff
+			border-radius: 16px
+			color: #28564A
+			font-size: 2rem
+			transition: background 0.2s, color 0.2s
+			&:hover
+				background: #ed9a22
+				color: #fff
+.tool-fixed-cta
+	@apply fixed bottom-[5vh] right-[24px] z-50 flex flex-col gap-4
+	@apply items-end rem:w-[52px] flex flex-col gap-2
+	.btn
+		width: 56px
+		height: 56px
+		border-radius: 50%
+		@apply bg-white
+		border: 2px solid #ed9a22
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0
+		transition: background 0.2s, border 0.2s
+
+		i, .icon
+			@apply text-Primary-2
+			font-size: 2rem
+			transition: color 0.2s
+
+		&:hover
+			@apply bg-Primary-2
+			border: 2px solid #fff
+			i, .icon
+				@apply text-white
+		&.button-to-top
+			@apply shadow-Dropshadow-Light opacity-0 transition-300
+			&.active
+				@apply opacity-100
+
+@keyframes ring
+	0%
+		transform: rotate(0deg)
+	20%
+		transform: rotate(45deg)
+	40%
+		transform: rotate(-15deg)
+	60%
+		transform: rotate(15deg)
+	70%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(0deg)

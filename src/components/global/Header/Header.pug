@@ -1,0 +1,50 @@
+header
+    .header
+        .container
+            .header-logo
+                a(href="")
+                    img(src="./img/logo.png" alt="Logo")
+            .header-menu
+                ul
+                    li.current-menu-item
+                        a.icon(href="")
+                            i(class="fa-solid fa-house mr-2")
+                    li
+                        a(href="/gioi-thieu") Giới thiệu
+                    li.has-children
+                        a(href="") 
+                            |Sản phẩm
+                            i.fa-solid.fa-chevron-down.ml-2
+                        ul.child-menu
+                            li
+                                a(href="") Sản phẩm 1
+                            li
+                                a(href="") Sản phẩm 2
+                            li
+                                a(href="") Sản phẩm 3
+                    li
+                        a(href="") Công bố sản phẩm
+                    li
+                        a(href="") Quy trình công nghệ
+                    li
+                        a(href="") Chứng nhận
+                    li
+                        a(href="") Tin tức
+            .container-right
+                .header-search
+                    i.fa-regular.fa-magnifying-glass
+                .header-language
+                    ul
+                        li.has-children
+                            a(href="#")
+                                | VN
+                                i.fa-solid.fa-chevron-down.ml-2
+                            ul.child-menu
+                                li
+                                    a(href="?lang=vi") VN
+                                li
+                                    a(href="?lang=en") EN
+                .header-contact
+                    a.contact-btn(href="")
+                        | Liên hệ
+                        i.fa-solid.fa-arrow-up-right.ml-2

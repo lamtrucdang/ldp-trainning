@@ -1,0 +1,118 @@
+header
+	@apply sticky top-0 left-0 w-full z-[999] bg-white
+	@apply shadow-Dropshadow-Light transition-all duration-300 ease-in-out
+	.header
+		.container
+			@apply flex items-center justify-between rounded-2xl px-1 md:px-1 lg:px-1
+			max-width: 90% !important
+		.header-logo
+			img
+				@apply w-full max-w-[60px] h-auto block
+				@apply md:max-w-[90px] lg:max-w-[120px]
+				@apply justify-start pl-0 mr-12
+		.header-menu
+			@apply flex items-center justify-center gap-4 py-2 md:py-2 lg:py-2
+			@media (max-width:1199.98px)
+				@apply hidden
+			&.is-open
+				@apply flex flex-col items-end absolute top-full left-0 w-full bg-white shadow-Dropshadow-Light z-50
+				@apply gap-0 p-4
+				.header-menu-list
+					@apply flex flex-col w-full
+				.container-right
+					@apply flex flex-col items-start w-full gap-2 mt-4
+					.header-search,
+					.header-language,
+					.header-contact
+						@apply w-full justify-start
+			@apply h-full
+			&>ul
+				@apply flex gap-16 h-full
+				
+				&>li
+					@apply rem:text-base font-medium text-Neutral-900
+					@apply relative flex items-center
+					&:hover
+						&>a
+							background-size: 100% 100%
+							@apply text-Primary-2
+					&:first-child
+						&>a
+							@apply rem:text-base font-medium text-Neutral-900
+					&[class*='has-children']
+						&:hover
+							&>ul
+								@apply opacity-100 pointer-events-auto
+						&>ul
+							@apply absolute top-full left-0 w-full opacity-0 pointer-events-none
+							@apply w-[209px] bg-white shadow-Dropshadow-Light rounded-[8px]
+							@apply transition-all duration-300 ease-in-out
+							@apply py-5 px-6
+							@apply flex flex-col gap-3 text-Primary-1 
+							li
+								a
+									+hover-underline(93%, #ed9a22)
+									@apply rem:text-base pb-1 
+					&[class*='current-menu-item']
+						&>a
+							background-size: 100% 100%
+							@apply text-Primary-2
+							&::before
+								@apply text-Primary-2
+					&>a
+						+hover-underline(93%, #ed9a22)
+						&:hover
+							&::before
+								@apply text-Primary-2
+						@apply pb-[3px] block hover:text-Primary-2 transition-all
+		@apply py-2 md:py-2 lg:py-2
+		.container-right
+			@apply flex items-center justify-end gap-4 py-2 md:py-2 lg:py-2
+			.header-search
+				@apply px-4 py-2 transition-all cursor-pointer
+				&:hover
+					background-size: 100% 100%
+					@apply text-Primary-2
+				i
+					@apply text-base transition-all
+
+			.header-language
+				@apply relative
+				@apply flex items-center justify-center gap-4
+				@media (max-width:1199.98px)
+					@apply hidden
+				@apply h-full
+				@apply py-3 md:py-4 lg:py-5
+				ul
+					li.has-children
+						&:hover
+							&>a
+								background-size: 100% 100%
+								@apply text-Primary-2
+								+hover-underline(93%, #ed9a22)
+
+						@apply relative
+						&:hover
+							> ul.child-menu
+								@apply opacity-100 pointer-events-auto
+						a
+							@apply flex items-center rem:text-base font-medium text-Neutral-900
+							@apply transition-all
+							i
+								@apply ml-2 text-base
+						ul.child-menu
+							@apply absolute top-full left-0 bg-white shadow-Dropshadow-Light rounded-[8px]
+							@apply opacity-0 pointer-events-none transition-all duration-300 ease-in-out z-50
+							@apply py-2 px-0 flex flex-col gap-0
+							li
+								a
+									@apply w-full px-5 py-2 block text-Neutral-900 transition-all
+									+hover-underline(93%, #ed9a22)
+									@apply rem:text-base pb-1
+			.header-contact
+				@apply ml-2
+				.contact-btn
+					@apply inline-flex justify-center items-center px-6 py-3 rounded-[80px] bg-Primary-1 text-white font-medium transition-all
+					@apply hover:bg-Primary-2
+					i
+						@apply ml-3 text-base
